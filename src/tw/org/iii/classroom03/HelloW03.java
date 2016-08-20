@@ -1,10 +1,12 @@
 package tw.org.iii.classroom03;
+// package的觀念  目錄結構 ，  會用相同的目錄結構放在你的目錄端  所以有一個國際慣例  用各個開發者所屬的網域名稱倒過來寫
+// 第一道敘述就是說明我所在的package，沒有就是預設? 預設啥? 10508200914
 
 public class HelloW03 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		TypeTest();
+		TypePractice();
 		// =================================================
 		boolean var5 = true;
 		boolean var6 = false;
@@ -38,22 +40,38 @@ public class HelloW03 {
 		// }
 		//System.out.println("Down");
 
+		// 這種寫法和 if(a && b || c) 相比 效能沒較差 時間複雜度都是N
+		// 以這個演算法來說 除以4的時候 就處理掉大部分的int數字了
+		// 巢狀的寫法 可能 比較好閱讀
+		// if(a && b || c)的寫法 較精簡
+		
 		int YearC = 2016;
 		// 計算 閏年
-		if ((YearC % 4) == 0) {
-			if ((YearC % 100) == 0) {
-				System.out.println("不是閏年");
-			}
-			else {
-				if((YearC % 400) == 0){
+		if ((YearC % 4) == 0) 
+		{
+			if ((YearC % 100) == 0) 
+			{
+				// System.out.println("不是閏年");
+				
+				// 西元年分除以4可整除但除以100不可整除，為閏年。
+				
+				if((YearC % 400) == 0)
+				{	// 西元年分除以400可整除，為閏年。  29天
 					System.out.println("是閏年");
 				}
-				else{
+				else
+				{	// 28天
 					System.out.println("不是閏年");
 				}
+				
+			}
+			else 
+			{	// 29天
+				System.out.println("是閏年?");
 			}
 		} 
-		else {
+		else 
+		{	// 西元年分除以4不可整除，為平年。  這裡老師說28天 是指二月有28天
 			System.out.println("不是閏年");
 		}
 
@@ -63,7 +81,7 @@ public class HelloW03 {
 
 	} // main()
 
-	public static void TypeTest() {
+	public static void TypePractice() {
 		// char �d��O 2^16
 		char v1 = 'a';
 		char v2 = 98; // ASCII : b
@@ -83,7 +101,7 @@ public class HelloW03 {
 		float var1;
 		double var2;
 		var1 = 12;
-		var1 = 12.3F; // 加上F代表示福點數
+		var1 = 12.3F; // 加上F代表示浮點數
 		var2 = 12.3;
 		double var3 = -10, var4 = 0;
 		// System.out.println(var3/var4); // 這是指除以一個很接近0的數
