@@ -2,9 +2,65 @@ package tw.org.iii.classroom03;
 
 public class IDcard {
 
-	private String id = "A123456789"; // 把他封裝起來(定為private) 以免此(身分證字號)屬性被其他物件更改
+	//private String id = "A123456789"; // 把他封裝起來(定為private) 以免此(身分證字號)屬性被其他物件更改
 	// 這裡的 id 是物件的屬性
+	//------------ 上面是產生身分證字號 寫法1在用的，下面是產生身分證字號 寫法2在用的 ---------------
+	private String id = null;
 	
+	
+	static String check = "ABCDEFGHJKLMNPQRSTUVXYWZIO";
+	
+	IDcard()
+	{
+		this(  (int)(Math.random()*2)==0  ,  (int)(Math.random()*26)  );
+	}
+	IDcard(boolean gender)
+	{
+		this(  gender , (int)(Math.random()*26)  );
+	}
+	IDcard(int area)
+	{
+		this(   (int)(Math.random()*2)==0  ,  area  );
+	}
+	IDcard(boolean gender, int area)
+	{	// 產生身分證字號
+		
+//		String c0 = check.substring(area, area-1);
+//		String c1 = gender?"1":"2";
+//		String c2 = "" + ; // 在java中 String加只會拿來運算? 所以可以做數值加字串?
+		
+		//--------------產生身分證字號 寫法1---------------
+		id = check.substring(area, area+1); // 產生ID的第一個英文字母
+		// 這裡已經配一個記憶體空間給 id變數
+		
+		id += gender?"1":"2"; // 產生ID的第一個數字
+		// 這裡又配一個記憶體空間給 id變數( 這段好像是在 1050827 下午3點~4點講的)
+		
+		// 這裡再配7個記憶體空間給 id變數
+		for(int i = 0; i<7; i++)
+			id += (int)(Math.random()*10) ; // 產生 ID的 第?個數字 ?
+		
+		for(int i=0; i<10; i++)
+			if(isRight( id + i ))
+			{
+				id = id + i;
+				break;
+			}
+		
+		//---------------產生身分證字號 寫法2------------------------------------
+		StringBuffer temp = new StringBuffer(  check.substring(area, area+1)  );
+		temp.append( gender?"1":"2" );
+		for(int i = 0; i<7; i++)
+			temp.append( (int)(Math.random()*10) );
+		
+		for(int i=0; i<10; i++)
+			if(isRight( temp.toString() + i )) // 因為 temp是StringBuffer類別，所以要先轉成 Sting 再來做 if判斷
+			{
+				id = temp.append(i).toString();
+				break;
+			}
+		
+	} // IDcard(boolean gender, int area)
 	IDcard(String id)
 	{	// 產生物件實體後的初始化動作
 		this.id = id; // this指的是這個類別(目前所在的類別?)
@@ -39,8 +95,31 @@ public class IDcard {
 		// "^09[0-8][0-9]-[0-9]{6}$" ==> 0912-123456 ==> 上課老師寫的 手機號碼 的正規表達式
 		
 		if(testId.matches("^[A-Za-z][12][0-9]{8}$"))
-		{	// TODO 前測試完成
-			ret = true;
+		{	// TODO 前測試
+			
+			int n12 = check.indexOf(testId.charAt(0))+10;
+			int n1 = n12/10;
+			int n2 = n12%10;
+			
+			int n3,n4,n5,n6,n7,n8,n9,n10,n11;
+			int[] nNN = new int[9];
+			for(int i=0; i<9; i++)
+				nNN[i] = Integer.parseInt(testId.substring(i+1,i+2)); // parseInt()是用來把字串轉換成整數的函式
+			// 建立維基百科的身分證字號規則中的n3~n11
+			
+			int total = n1*1 +
+						n2*9 +
+						nNN[0]*8 + 
+						nNN[1]*7 + 
+						nNN[2]*6 + 
+						nNN[3]*5 + 
+						nNN[4]*4 + 
+						nNN[5]*3 + 
+						nNN[6]*2 + 
+						nNN[7]*1 + 
+						nNN[8]*1;
+			
+			ret = total % 10 == 0;
 		}
 		else
 		{
