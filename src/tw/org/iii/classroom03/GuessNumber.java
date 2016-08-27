@@ -16,6 +16,8 @@ public class GuessNumber {
 		{	// 迴圈3次 所以只能猜3次		
 			// 開始猜
 			String guess = JOptionPane.showInputDialog("猜吧");
+			// showInputDialog會回傳使用者輸入的字傳給 字串變數guess
+			
 			//比對
 			if(guess.equals(answer))
 			{	// equals()在比對字串內的字元是否相同	
@@ -80,6 +82,8 @@ public class GuessNumber {
 		} // for(int i=0; i<poker.length; i++)
 		String ret="";
 		for(int v : poker) ret += v;
+		// java方便的地方 電腦自己會 做完運算後 在幫你轉成字串加上去 你不用像C系列語言 還要數值轉字串
+		// 任何資料 寫出來後 型別已經確定了 ==> 強型別 ?
 		return ret ;
 		// return "734";
 	} // static String crateAnswer(int n)
