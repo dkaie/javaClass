@@ -9,7 +9,7 @@ public class javaPrac0828_8 {
 		Brad433 obj1 = new Brad433();
 		// step 4. 因為用到Brad433類別 所以 main() 也須處理 throw的情況
 		// 法1     如果在 main 後 接上 throws Exception也可  JVM會處理   較沒人這樣用
-		// 
+		// 法2     加上 try catch
 		try{
 		obj1.m3();
 		}catch(Exception e){}
