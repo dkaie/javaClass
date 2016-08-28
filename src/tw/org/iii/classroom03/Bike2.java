@@ -1,6 +1,6 @@
 package tw.org.iii.classroom03;
 // Object-oriented practice
-public class Bike {
+class Bike2 {
 	// 類別不是讓你去執行的 類別是在定義的
 	
 	// Field
@@ -12,7 +12,7 @@ public class Bike {
 	
 	// 慣例 : 通常建構式會定義在屬性和其他的方法之間
 	//Constructor
-	public Bike()  // 這裡的public 是在 10508281401上存取修飾字的時候才加上的
+	public Bike2()
 	{	// java的建構式 沒有傳回值 所以不須加 void
 		//，如果加上 void則變成一個和建構式相同名稱的普通方法
 		// 建構子的名稱和類別名稱一模一樣(大小寫嚴格區分 所以要相同)
@@ -26,7 +26,7 @@ public class Bike {
 	}
 	
 	// Method
-	protected void upSpeed()
+	void upSpeed()
 	{
 		speed = speed<1?1:speed*1.2;
 //		if(speed<1) speed=1;

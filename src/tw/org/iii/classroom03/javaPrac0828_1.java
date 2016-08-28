@@ -86,8 +86,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 	} // main
 
 	
-	// 這個函數 是因為 要用到 button的 addActionListener方法
-	// ，而
+
 	
 	//內部類別最接近 主類別? 所以會先呼叫 內部類別MyListener 沒有在去叫外部類別MyListener
 	
@@ -104,7 +103,9 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 	//---------- 內部類別(end) --------------
 	
 	
-	
+	// 這個函數 是因為 要用到 button的 addActionListener方法
+	// ，而addActionListener方法 需要 主類別 去implements ActionListener介面
+	// ，而ActionListener介面 的實作 是靠actionPerformed方法
 	@Override
 	public void actionPerformed(ActionEvent event) {
 		// TODO 自動產生的方法 Stub
