@@ -38,7 +38,13 @@ class Brad393 extends Brad392
 	void m3(){  System.out.println("Brad393():m3()被呼叫");  } // 子類別自己加的方法
 }
 
-
+final class Brad394
+{	// 抽象類別 高度期待有人來繼承他
+	// final類別 不要 給別人繼承  所以  final類別 不會見到protected修飾字
+	// 所以上述兩個類別 不太可能有關聯
+	
+	
+}
 
 
 
