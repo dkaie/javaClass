@@ -6,12 +6,11 @@ public class javaPrac0828_2 {
 		// TODO 自動產生的方法 Stub
 		Brad354 car = new Brad354();
 		Brad352 tire1 = new Brad352();
-		
-		// TODO 這列宣告的類別 是寫錯的 去看老師是用哪個類別
-		Brad354 tire2 = new Brad354(); 
+		Brad353 tire2 = new Brad353(); 
 		
 		// TODO 這裡不懂
 		car.m1(tire1);
+	//	car.m1(new Brad352()); // 這列是自己在  0830晚自習 自己加上去的
 	}
 
 }

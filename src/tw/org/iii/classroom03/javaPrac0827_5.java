@@ -30,8 +30,8 @@ class Brad332 extends Brad331
 	{
 		super.m1();
 		a++; // 會抓"距離"最近的a來使用，"距離"的遠近為 : 區域變數 < 子類別 < 父類別
-		System.out.println("Brad332:m1(int)被呼叫 + a"  + a);
-		System.out.println("Brad332:m1(int)被呼叫 + this.a"  + this.a);
+		System.out.println("Brad332:m1(int)被呼叫 + a="  + a);
+		System.out.println("Brad332:m1(int)被呼叫 + this.a="  + this.a);
 		// 這個this.a是物件的屬性，因為Brad332繼承Brad331所以 如果 Brad332沒有宣告 int a; 的話 
 		// 就會用Brad331的a ??
 	}
