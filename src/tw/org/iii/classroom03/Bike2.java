@@ -1,5 +1,8 @@
 package tw.org.iii.classroom03;
 // Object-oriented practice
+
+// 這列是 1050903在學  FileStream時 測試用加上去的
+
 class Bike2 {
 	// 類別不是讓你去執行的 類別是在定義的
 	

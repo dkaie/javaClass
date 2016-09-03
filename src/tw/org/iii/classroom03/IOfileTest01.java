@@ -30,16 +30,23 @@ public class IOfileTest01 {
 	{
 		File f1 = new File("dir1/Brad03.txt");
 		try {
-			FileOutputStream fout = new FileOutputStream(f1);
+			//FileOutputStream fout = new FileOutputStream(f1);
 			// Brad03.txt原本是沒建立的檔案,在 new FileOutputStream() 到 obj.close()之間
 			// 電腦自己幫你建檔
+			// 指標 指到 檔案最開始的地方把原檔清掉 資料從指標的地方寫下去
 			
-			fout.write("Hello,Brad".getBytes()); // 把物件轉成byte陣列 讓它傳送出去
+			FileOutputStream fout = new FileOutputStream(f1,true);
+			// 指標 指到 檔案的尾端  不會把原檔清掉 資料從指標的地方寫下去
+			
+			fout.write("Hello,Brad02\n".getBytes()); // 把物件轉成byte陣列 讓它傳送出去
+			
+			// 微軟上 最好用 \r\n做換列  UNIX用 \n即可換列
+			//fout.append(); // 根本沒有這種方法可呼叫 考java認證考試  考題會出現這玩意來騙考生
 			
 			fout.flush(); // 沖乾淨  Buffer 或 Stream 內的資料 到 file內
 			// 做本機存取時 沒 加 flush沒關係  但做 網路資料傳例時 會出現 少資料的情況 因為 沒沖乾淨 到 file內
 			fout.close();
-			System.out.println();
+			System.out.println("沒有出現例外"); //
 		} catch (Exception e) {
 			// TODO 自動產生的 catch 區塊
 			//e.printStackTrace();
@@ -81,7 +88,9 @@ public class IOfileTest01 {
 //			byte[] temp = new byte[3];
 //			while( (c = fin.read()) != -1 )	// read()函數   如果 讀到Stream結尾 會回傳 -1
 //			{
-//				System.out.print((char)c);// 中文字占3個byte,但一次只讀一個byte所以中文字會讀出亂碼		
+//				System.out.print((char)c);// 中文字占3個byte,但一次只讀一個byte所以中文字會讀出亂碼
+			
+			// TODO  這裡 弄清楚一下
 //				System.out.print(new String(temp,0,c)); // 從0開始 到第c個
 //				// Big5    2^16=65536 這個數量 小於 中文字的總數量
 //				// UTF-8   2^24	
@@ -90,7 +99,7 @@ public class IOfileTest01 {
 			//----------處理中文 和   其他各式檔案?--------
 			int c ;
 			byte[] temp = new byte[(int)len]; // 陣列的 index最大只有到int
-			// int 的範圍 2^x=4億多 = 4GB 分正負號 2GB 所以不要開大於 2GB的 檔  要大於2GB 用迴圈分批讀
+			// int 的範圍 2^x=4億多 = 4GB 分正負號 2GB 所以不要開大於 2GB的 檔     大於2GB 要用迴圈分批讀
 			fin.read(temp);
 			System.out.println(new String(temp));
 			
