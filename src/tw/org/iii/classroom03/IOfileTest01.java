@@ -1,6 +1,10 @@
 package tw.org.iii.classroom03;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 //在為軟上面 : 副檔名只是用來開啟檔案的關聯
@@ -14,17 +18,98 @@ public class IOfileTest01 {
 
 		//java_io_File_practice();
 		//java_io_File_practice02();
-		//java_io_File_practice03();
+		//mkdir_func_practice();
+		//listRoots_func_practice();
+		//FileInputStream_class_practice();
+		//FileReader_class_practice();
+		FileOutputStream_class_practice();
+		
+	} // main( )
+
+	public static void FileOutputStream_class_practice()
+	{
+		File f1 = new File("dir1/Brad03.txt");
+		try {
+			FileOutputStream fout = new FileOutputStream(f1);
+			// Brad03.txt原本是沒建立的檔案,在 new FileOutputStream() 到 obj.close()之間
+			// 電腦自己幫你建檔
+			
+			fout.write("Hello,Brad".getBytes()); // 把物件轉成byte陣列 讓它傳送出去
+			
+			fout.flush(); // 沖乾淨  Buffer 或 Stream 內的資料 到 file內
+			// 做本機存取時 沒 加 flush沒關係  但做 網路資料傳例時 會出現 少資料的情況 因為 沒沖乾淨 到 file內
+			fout.close();
+			System.out.println();
+		} catch (Exception e) {
+			// TODO 自動產生的 catch 區塊
+			//e.printStackTrace();
+		}
+	}
+	public static void FileReader_class_practice()
+	{	// FileReader  專門用來讀字元  單純讀文字檔 
+		// Read class 的源頭 是 inputStream
+		File f1 = new File("dir1/Brad01.txt");
+		try {
+			FileReader reader = new FileReader(f1);
+			int c;
+			while( (c = reader.read()) != -1 )
+			{
+				System.out.print((char)c);
+			}
+			reader.close();
+		} catch (Exception e) {
+			// TODO 自動產生的 catch 區塊
+			//e.printStackTrace();
+		}
+	}
+	
+	// ftp傳檔時會問你用 ASCII傳(FileReader 較快) 或是 binary傳(FileInputStream)
+	
+	public static void FileInputStream_class_practice()
+	{	// FileInputStream 用在處理 各式檔案,用他去讀文字檔要另外寫邏輯去處理文字檔
+		File f1 = new File("dir1/Brad01.txt");
+		long len = f1.length();
+		try{
+			FileInputStream fin = new FileInputStream(f1);
+			
+//			int c1 = fin.read();	// read()函數   如果 讀到Stream結尾 會回傳 -1
+//			System.out.println(c1); // 這是一個byte的資料 會印出ASCII碼
+//			System.out.println((char)c1); // 強制轉型
+			
+			//----------處理中文--------
+//			int c ;
+//			byte[] temp = new byte[3];
+//			while( (c = fin.read()) != -1 )	// read()函數   如果 讀到Stream結尾 會回傳 -1
+//			{
+//				System.out.print((char)c);// 中文字占3個byte,但一次只讀一個byte所以中文字會讀出亂碼		
+//				System.out.print(new String(temp,0,c)); // 從0開始 到第c個
+//				// Big5    2^16=65536 這個數量 小於 中文字的總數量
+//				// UTF-8   2^24	
+//			}
+		
+			//----------處理中文 和   其他各式檔案?--------
+			int c ;
+			byte[] temp = new byte[(int)len]; // 陣列的 index最大只有到int
+			// int 的範圍 2^x=4億多 = 4GB 分正負號 2GB 所以不要開大於 2GB的 檔  要大於2GB 用迴圈分批讀
+			fin.read(temp);
+			System.out.println(new String(temp));
+			
+			fin.close();
+			//System.out.println("沒有拋出例外"); // 前面有發生例外 就會直接跳到catch不會執行這列code
+		}
+		catch(FileNotFoundException fe){ System.out.println(fe.toString()); }
+		catch(IOException fe)			{ System.out.println(fe.toString()); }
+		
+	}
+	public static void listRoots_func_practice()
+	{
 		File[] roots = File.listRoots();
 		for(File root :roots) // 左手邊是元素的型別
 		{
 			System.out.println(root.getAbsolutePath()); // 顯示有幾個根目錄 ?
 		}
-		
-		
-	} // main( )
-
-	public static void java_io_File_practice03()
+	}
+	public static void mkdir_func_practice()
 	{
 //		File dir2 = new File("dir1/dir2");
 //		if(!dir2.exists())
