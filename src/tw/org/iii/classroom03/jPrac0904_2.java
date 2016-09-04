@@ -34,6 +34,7 @@ public class jPrac0904_2 {
 								InetAddress.getByName("10.2.24.106"),
 								8888);
 				// 10.2.24.255  255會對整個網域廣播
+				// 10.2.24.0    0   好像是對接收整個網域送來的資料
 				
 				// port 小於 1024的不要用  通常都是大家 所 well know 眾所皆知 大家認定的
 				// 80網業伺服器  53 dns  25 smtp  23 BBS  110 OUTLOOK 22 ssh  20 21FTP   443網路芳鄰
