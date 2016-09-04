@@ -18,10 +18,10 @@ public class jPrac0904_2 {
 		
 		int i=0;
 		
-		while(true)
+		while(true) // 迴圈老師叫我們自己寫  用來不斷的發送封包使用
 		{ 
-		
-			String data = "hello i'm 134";
+			i++; // 每發送一次封包 這裡都會加1 在接收端 看這個數值 可觀察 UDP接收封包時 會漏接哪些封包
+			String data = "hello i'm 134 + " + i;
 			byte[] sendData = data.getBytes();
 			try
 			{
