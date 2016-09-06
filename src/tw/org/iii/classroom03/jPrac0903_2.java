@@ -25,6 +25,12 @@ public class jPrac0903_2 {
 			oout.writeObject(s1); // 沒有 implements Serializable 這列發生例外
 			oout.writeObject(s2);
 			
+			// TODO 1050906晚自習看到這
+			// 這裡的時間是1050903 15:32 錄影時間為 4:58:10的地方
+			// 某個物件須? 序列化 但它的類別卻沒有 實作序列化(implements Serializable) 的介面 
+			// ,就會拋出 java.io.NotSerializableException(這傢的父類別是IOException
+			// ,可是你把底下的implements Serializable刪掉  拋例外卻不是這裡的 catch在拋的? 什麼情況?)
+			
 			oout.flush();
 			oout.close();
 			

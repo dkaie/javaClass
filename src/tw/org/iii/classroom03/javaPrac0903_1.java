@@ -28,8 +28,9 @@ public class javaPrac0903_1 extends JFrame {
 	private JButton open, save, exit;
 	private JTextArea edit;
 	
-	//TODO 這裡聽一下 錄影  10509031338
-	private File openFile;
+	//TODO 這裡聽一下 錄影  10509031338(已解決)
+	private File openFile; // 師:把這個openFile提升為 我這個類別所擁有的屬性。
+	// 嗯....就是把openFile從 這個類別的區域變數 移到這來 變成這個類別內的全域變數
 	
 	// 子類別不寫建構子  會使用 父類別的 無傳參數建構子
 	public javaPrac0903_1()
@@ -42,7 +43,7 @@ public class javaPrac0903_1 extends JFrame {
 		exit = new JButton("Exit");
 		edit = new JTextArea(); // 要new出來 才有物件實體
 		
-		JScrollPane jsp = new JScrollPane(edit); // 自己去看 API  JScrollPane有一個建構子的輸入參數是給你放 元件的
+		JScrollPane jsp = new JScrollPane(edit); // 自己去看 java API  JScrollPane有一個建構子的輸入參數是給你放 元件的
 		// JScrollPane 可以有 Scroll Bar的功能
 		// 老師說不要用 JScrollBar 因為你用了就得自己去關聯  ScrollBar拖曳到哪 資料顯示到哪
 		
@@ -116,13 +117,17 @@ public class javaPrac0903_1 extends JFrame {
 	{
 		JFileChooser jfc = new JFileChooser();
 		if( jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION )
-		{	// 判斷有沒有 選擇檔案
+		{	// 判斷有沒有 選擇檔案      要選檔  且有按下確定   這個 if判斷才會成立
 			// showOpenDialog方法   會回傳 int 以表示 檔案選擇的狀況   所以 APPROVE_OPTION 應該是類似像 列舉 那樣的格式
 			// showOpenDialog方法 的輸入參數 好像是填入父容器
 			// 這個是java自己做的OpenDialog
-			// 要微軟的OpenDialog 也可以呼叫 Windows的API
+			// 要使用Windows OS上面的的OpenDialog 要呼叫 Windows的API
+			
+			// 上面 if已經有確定 是否有選檔案了嘛   那你到底選甚麼  我把它 get出來
 			openFile = jfc.getSelectedFile(); // 這傢伙 好像 自己會去接收 看 JFileChooser回傳的東西 ?  
-			//System.out.println(openFile.getAbsolutePath());
+			//System.out.println(openFile.getAbsolutePath()); // 取得檔案的絕對路徑
+			
+			// 下一步是 把file顯示到 JTextArea元件上   用一個串流 來讀它的內容
 			readFile();
 		}
 	} // doOpen( )
