@@ -22,8 +22,9 @@ public class TCPReciver {
 //			// 物件實體
 //			
 //			System.out.println("before");
-//			//TODO 10509041303聽一下
-//			Socket socket = server.accept(); // 回應對方 三方交握    傳回socket  10509041303聽一下
+//			//TODO 10509041303聽一下(已聽過  9/4 pm 收音不佳)
+			// 10509041305~09老師離開mic 沒聲音
+//			Socket socket = server.accept(); // 回應對方 三方交握(自己上網查 資料多到爆),傳回socket
 //			InputStream oin = socket.getInputStream();
 //			// 無法直接建構物件實體  在方法中告訴你 這是一個 inputStream 可能透過子類別去實作的  13:20
 //			
@@ -31,13 +32,15 @@ public class TCPReciver {
 //			BufferedReader reader = new BufferedReader(irs);
 //				
 //			int c;
-//			StringBuffer sb = new StringBuffer();// 10509041312聽一下
+//			StringBuffer sb = new StringBuffer();
+			// 10509041312聽一下,mic沒收到清楚的音,好像是在講 用StringBuffer 跟什麼比較  累加字串的差異
+			// 老師建議用StringBuffer來收 串流送來的一堆字元
 //			//while( (c = oin.read()) != -1 )
 //			while( (c = reader.read()) != -1 )
-//			{
+//			{	// 一次一個byte讀進來 !?  對串流一直收  會收到一個一個的字元
 //				sb.append((char)c);
 //			}
-//			InetAddress urip =  socket.getInetAddress();
+//			InetAddress urip =  socket.getInetAddress(); // 取得相關資訊(Client的IP?)
 //			
 //			// 抽象類別 也可有物件實體  只是看怎麼實作出來  但沒辦法用 new的就是了
 //			// 如果要傳文字資料 最好用 Reader 和 Writer較佳

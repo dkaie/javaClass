@@ -23,8 +23,11 @@ public class TCPClient {
 //			// 如果我連過去 他願意聽  才有跟我講話的機會
 //			
 //			OutputStream out =  socket.getOutputStream();
-//			// 的到一個輸出串流
+//			// 得到一個輸出串流
+		
+			// 資料拋過去
 //			
+			//得到串流後就開始發送資料
 //			out.write("hello 上課中".getBytes());
 //			
 //			out.flush();
