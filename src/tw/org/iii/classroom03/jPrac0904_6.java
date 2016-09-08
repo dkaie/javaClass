@@ -7,7 +7,7 @@ import java.util.TreeSet;
 public class jPrac0904_6 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		//Set_class_practice();
 		List_class_practice();
 											

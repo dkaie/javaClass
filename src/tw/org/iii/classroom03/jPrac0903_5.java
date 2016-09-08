@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class jPrac0903_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		System.out.println("-------------序列化---------------");
 		Brad573 obj = new Brad573();
 		try {
@@ -23,7 +23,7 @@ public class jPrac0903_5 {
 			oout.close();
 			System.out.println("-------------序列化 完成---------------");
 		} catch (IOException e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 		}
 		
@@ -36,14 +36,14 @@ public class jPrac0903_5 {
 			oin.close();
 			System.out.println("-------------解序列化 完成---------------");
 		} catch (Exception e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 		}
 	}//main
 
 }
 
-//TODO 這裡可以考慮看一下錄影
+//TODO 這裡可以考慮看一下錄影(已看過)
 // 雖然 子類別已序列化  但 父類別無序列化  則 解序列化時 會去 實作父類別? 會去跑父類別的建構子   10509031645這裡聲音會很小聲
 // 如果父類別 序列化 解序列化回來時  父子類別 都不會再去實作?不去跑建構子?
 // 只要使用了 子類別     不只子類別 父類別也會一併存在記憶體中

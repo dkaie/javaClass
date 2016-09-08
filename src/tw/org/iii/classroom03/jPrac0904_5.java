@@ -10,7 +10,7 @@ import java.net.URL;
 public class jPrac0904_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		// ======= http 教學 ================
 		
@@ -58,7 +58,7 @@ public class jPrac0904_5 {
 			in.close();
 			System.out.println("接收完成");
 		} catch (Exception e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 			System.out.println(e.toString());
 		}

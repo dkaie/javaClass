@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class GuessNumber {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 	
 		// 產生謎底
 		String answer = crateAnswer(3);

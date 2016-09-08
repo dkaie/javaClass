@@ -11,7 +11,7 @@ public class jPrac0904_3 {
 	// 這個是在作 UDP ?
 	// 接收 封包
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		
 		//while(true)
@@ -36,7 +36,7 @@ public class jPrac0904_3 {
 				
 				System.out.println("接收成功 +" + urip.getHostAddress()+":"+new String(data,0,len));
 			} catch (Exception e) {
-				// TODO 自動產生的 catch 區塊
+				// 
 				//e.printStackTrace();
 				System.out.println(e.toString());
 			}

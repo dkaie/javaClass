@@ -102,7 +102,7 @@ public class IDcard {
 		// "^09[0-8][0-9]-[0-9]{6}$" ==> 0912-123456 ==> 上課老師寫的 手機號碼 的正規表達式
 		
 		if(testId.matches("^[A-Za-z][12][0-9]{8}$"))
-		{	// TODO 前測試
+		{	// 前測試
 			
 			int n12 = check.indexOf(testId.charAt(0))+10;
 			int n1 = n12/10;

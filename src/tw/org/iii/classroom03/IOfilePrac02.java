@@ -8,7 +8,7 @@ import java.io.InputStreamReader;
 public class IOfilePrac02 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		FileInputStream fin;
 		try {	
 			//-------------Stream 串接---------------

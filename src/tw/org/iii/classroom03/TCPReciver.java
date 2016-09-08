@@ -14,7 +14,7 @@ import java.net.Socket;
 public class TCPReciver {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		//-----------------------------接收封包(字串)------------------------------------	
 //		try {
@@ -50,7 +50,7 @@ public class TCPReciver {
 //			System.out.println(urip.getHostAddress()+":"+ sb); // 印出 封包的ip 和封包的內容
 //			
 //		} catch (IOException e) {
-//			// TODO 自動產生的 catch 區塊
+//			// 
 //			//e.printStackTrace();
 //		}
 		
@@ -87,7 +87,7 @@ public class TCPReciver {
 			System.out.println("Reciver OK !!");
 			
 		} catch (IOException e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 			System.out.println("Server exception:"+e.toString());
 		}

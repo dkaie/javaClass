@@ -3,7 +3,7 @@ package tw.org.iii.classroom03;
 public class testException {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		// 可被拋出來的東西有兩種  error & Exception
 		// error 可被丟出 但無法處理 ??
 		

@@ -6,7 +6,7 @@ import java.net.UnknownHostException;
 public class jPrac0904_1 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		try {
 			//InetAddress ip = InetAddress.getByName("www.microsoft.com");// 會得到 dns回報給你的 IP
 			//InetAddress ip = InetAddress.getByName("10.2.24.3");// 這是資策會的內部IP 會收到 10.2.24.3
@@ -29,7 +29,7 @@ public class jPrac0904_1 {
 			// 可用log記錄使用者的操作資訊 以方便日後的除錯 否則使用者不太可能會詳細告訴你 他是如何操作你寫的程式
 			
 		} catch (UnknownHostException e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 			System.out.println("找不到主機位址");
 			// 看IP的合理性 下手 去產生 例外   只檢查 0~255   不合理 就拋例外

@@ -51,7 +51,6 @@ public class javaPrac0903_1 extends JFrame {
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT)); // 這只是個區域變數 無繼承 實作介面的關係 ?
 		// 使用JPanel類別來 做版面配置
 		
-		// TODO 這裡不懂
 		//setLayout(new FlowLayout()); // 方法(new出物件實體)
 		//setLayout(new FlowLayout(FlowLayout.RIGHT)); // 靠右側
 		//add(open); add(save); add(exit);
@@ -65,7 +64,7 @@ public class javaPrac0903_1 extends JFrame {
 			// 內部匿名實作該介面的物件實體 把該方法實作出來
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
+				// 
 				doOpen();
 			}
 		});
@@ -74,7 +73,7 @@ public class javaPrac0903_1 extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
+				// 
 				doSave();
 			}
 		});
@@ -83,7 +82,7 @@ public class javaPrac0903_1 extends JFrame {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
+				// 
 				doExit();
 			}
 		});
@@ -148,10 +147,9 @@ public class javaPrac0903_1 extends JFrame {
 		}
 	}
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		// 因為它本身是static? 所以自己會去做一個載入的動作(載啥?)
 		
-		// TODO 這裡不懂
 		new javaPrac0903_1();
 	} // main
 

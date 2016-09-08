@@ -7,7 +7,7 @@ import java.io.ObjectInputStream;
 public class jPrac0903_3 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		//------------解序列化----------------
 		
@@ -29,7 +29,7 @@ public class jPrac0903_3 {
 //			catch (IOException | ClassNotFoundException e) {
 //			// 沒有 父子類別關係的 例外類別 可以使用 或  邏輯運算子
 //			
-//			// TODO 自動產生的 catch 區塊
+//			// 
 //			//e.printStackTrace();
 //			
 //			System.out.println("hello asdfg");

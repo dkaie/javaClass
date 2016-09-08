@@ -13,7 +13,7 @@ public class jPrac0904_2 {
 	// 這個是在作 UDP ?
 	// sender 封包
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		
 		int i=0;
@@ -51,7 +51,7 @@ public class jPrac0904_2 {
 			{
 				
 			} catch (IOException e) {
-				// TODO 自動產生的 catch 區塊
+				// 
 				//e.printStackTrace();
 			}
 		} // while

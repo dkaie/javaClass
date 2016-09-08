@@ -3,12 +3,12 @@ package tw.org.iii.classroom03;
 public class javaPrac0828_2 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		Brad354 car = new Brad354();
 		Brad352 tire1 = new Brad352();
 		Brad353 tire2 = new Brad353(); 
 		
-		// TODO 這裡不懂
+		// TODO 這裡不懂(暫時理解?) 參數內填入別的物件
 		car.m1(tire1);
 	//	car.m1(new Brad352()); // 這列是自己在  0830晚自習 自己加上去的
 	}

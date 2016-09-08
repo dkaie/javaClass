@@ -37,7 +37,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT)); // 這只是個區域變數 無繼承 實作介面的關係 ?
 		// 使用JPanel類別來 做版面配置
 		
-		// TODO 這裡不懂
+		// TODO 這裡不懂(暫時理解?)  參數內填入 new物件實體  
 		//setLayout(new FlowLayout()); // 方法(new出物件實體)
 		//setLayout(new FlowLayout(FlowLayout.RIGHT)); // 靠右側
 		//add(open); add(save); add(exit);
@@ -62,7 +62,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 			// 我寫一個類別 讓他去實作 你再把他new出來
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
+				// 
 				doOpen();
 			}
 		});
@@ -78,10 +78,10 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 	
 	
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		// 因為它本身是static? 所以自己會去做一個載入的動作(載啥?)
 		
-		// TODO 這裡不懂
+		// TODO 這裡不懂(暫時理解?)  main()裡面直接new建構子   
 		new javaPrac0828_1();
 	} // main
 
@@ -95,7 +95,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 	{
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO 自動產生的方法 Stub
+			// 
 			System.out.println("MyListener 內部類別被呼叫 + "+count++);
 			// 內部類別 可存取外部類別的屬性和方法
 		}	
@@ -108,7 +108,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 	// ，而ActionListener介面 的實作 是靠actionPerformed方法
 	@Override
 	public void actionPerformed(ActionEvent event) {
-		// TODO 自動產生的方法 Stub
+		// 
 		// ActionEvent宣告出的 event 可以判斷 是哪個物件 叫用了這個方法
 		//if(event.getSource() == open)
 		if(event.getSource().equals(open)) // 只要是物件 都可以使用 equals()方法
@@ -125,7 +125,7 @@ class MyListener implements ActionListener
 {
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO 自動產生的方法 Stub
+		// 
 		System.out.println("MyListener 外部類別被呼叫 +");
 		// 如果這個類別想存取 別人類別的屬性或方法 只能靠參數傳遞來達成
 	}	

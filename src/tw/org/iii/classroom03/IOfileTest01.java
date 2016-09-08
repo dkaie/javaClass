@@ -14,7 +14,7 @@ import java.io.IOException;
 public class IOfileTest01 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 
 		//java_io_File_practice();
 		//java_io_File_practice02();
@@ -48,7 +48,7 @@ public class IOfileTest01 {
 			fout.close();
 			System.out.println("沒有出現例外"); //
 		} catch (Exception e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 		}
 	}
@@ -65,7 +65,7 @@ public class IOfileTest01 {
 			}
 			reader.close();
 		} catch (Exception e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 		}
 	}
@@ -171,7 +171,7 @@ public class IOfileTest01 {
 					System.out.println("發生預期中的例外");
 				}
 			} catch (IOException e) {
-				// TODO 自動產生的 catch 區塊
+				// 
 				//e.printStackTrace();
 				System.out.println(e.toString());
 			}

@@ -3,7 +3,7 @@ package tw.org.iii.classroom03;
 public class javaPrac0827_3 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 	//	Brad321.m1(); // 只要有用到類別的東西 ??就被載入記憶體中???????
 		
 		Brad321 obj11 = new Brad321();

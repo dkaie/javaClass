@@ -5,7 +5,7 @@ package tw.org.iii.classroom03;
 public class HelloW03 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		// 
 		TypePractice();
 		// =================================================
 		boolean var5 = true;

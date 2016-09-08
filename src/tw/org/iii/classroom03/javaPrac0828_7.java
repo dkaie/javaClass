@@ -9,7 +9,7 @@ import sun.security.util.PropertyExpander.ExpandException;
 public class javaPrac0828_7 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		Bird b1 = new Bird();
 		try
 		{

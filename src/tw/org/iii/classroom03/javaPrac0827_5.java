@@ -3,7 +3,7 @@ package tw.org.iii.classroom03;
 public class javaPrac0827_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		Brad332 obj1 = new Brad332();
 		obj1.m1();
 		obj1.m1(1);

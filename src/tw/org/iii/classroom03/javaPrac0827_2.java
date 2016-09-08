@@ -6,7 +6,7 @@ package tw.org.iii.classroom03;
 public class javaPrac0827_2 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		//testUseClass();
 		//testGetNumberFormString();
 		

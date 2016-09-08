@@ -10,7 +10,7 @@ import java.net.Socket;
 public class TCPClient {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		//-------------------------傳送封包(字串)--------------------------------
 //		try
@@ -65,7 +65,7 @@ public class TCPClient {
 //			client.close();
 //			System.out.println("send finish !!");
 //		} catch (Exception e) {
-//			// TODO 自動產生的 catch 區塊
+//			// 
 //			//e.printStackTrace();
 //			System.out.println("Client exception:"+e.toString());
 //		}
@@ -99,7 +99,7 @@ public class TCPClient {
 			
 			System.out.println("send finish !!");
 		} catch (Exception e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 			System.out.println("Client exception:"+e.toString());
 		}
@@ -111,7 +111,7 @@ public class TCPClient {
 	}//main
 
 	private static String InetAddress(String string) {
-		// TODO 自動產生的方法 Stub
+		// 
 		return null;
 	}
 

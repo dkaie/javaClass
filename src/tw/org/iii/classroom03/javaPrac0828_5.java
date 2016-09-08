@@ -5,7 +5,7 @@ package tw.org.iii.classroom03;
 public class javaPrac0828_5 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 		//  final 的變數只能給值一次
 		//final int d = 10; // d是區域變數。宣告在 方法/實作 中的都是區域變數
@@ -45,7 +45,7 @@ class Brad376 implements Brad375
 	Brad376(){c=12;}
 	@Override
 	public void m1() {
-		// TODO 自動產生的方法 Stub
+		// 
 		b++;
 		//a = 1;	// 因為在介面中的屬性 有 public 及 final 及 static的性值
 					// ，其中 final的性值導致 這裡不可再設定 a
@@ -53,13 +53,13 @@ class Brad376 implements Brad375
 
 	@Override
 	public void m2() {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 	}
 
 	@Override
 	public void m3() {
-		// TODO 自動產生的方法 Stub
+		// 
 		
 	}
 	

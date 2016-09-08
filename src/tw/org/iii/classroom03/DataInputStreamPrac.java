@@ -9,7 +9,7 @@ public class DataInputStreamPrac {
 	// 上午教的檔案 I/O 都是 做 byte型態  這裡 有 各種數值型態
 	
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		try {
 			DataInputStream din = new DataInputStream(new FileInputStream("dir1/data.dat"));
 			// 老師說副檔名叫啥不重要

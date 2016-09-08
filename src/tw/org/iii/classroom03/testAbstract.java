@@ -3,7 +3,7 @@ package tw.org.iii.classroom03;
 public class testAbstract {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		Brad391 obj1 = new Brad391();
 		//Brad392 obj2 = new Brad392(); // 抽象類別無法做出物件實體
 		

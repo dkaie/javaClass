@@ -8,7 +8,7 @@ import java.io.Serializable;
 public class jPrac0903_2 {
 
 	public static void main(String[] args) {
-		// TODO 自動產生的方法 Stub
+		// 
 		Student s1 = new Student(new Pokemon(), "Dave", 90, 50, 75);
 		Student s2 = new Student(new Pokemon(), "Tony", 80, 70, 45);
 		
@@ -25,7 +25,7 @@ public class jPrac0903_2 {
 			oout.writeObject(s1); // 沒有 implements Serializable 這列發生例外
 			oout.writeObject(s2);
 			
-			// TODO 1050906晚自習看到這
+
 			// 這裡的時間是1050903 15:32 錄影時間為 4:58:10的地方
 			// 某個物件須? 序列化 但它的類別卻沒有 實作序列化(implements Serializable) 的介面 
 			// ,就會拋出 java.io.NotSerializableException(這傢的父類別是IOException
@@ -35,7 +35,7 @@ public class jPrac0903_2 {
 			oout.close();
 			
 		} catch (IOException e) {
-			// TODO 自動產生的 catch 區塊
+			// 
 			//e.printStackTrace();
 			System.out.println(e.toString());
 		}
@@ -52,7 +52,7 @@ public class jPrac0903_2 {
 
 class Student implements Serializable
 {
-	// Serializable 序列化       這玩意 自己去看 API會發現  沒有 要實作 的方法  10509031530
+	// Serializable(序列化,類似  介面 interface 的一種東西),這玩意 自己去看 API會發現  沒有 要實作 的方法  10509031530
 	// 所以 只需 宣告 即可       implements Serializable即可
 	
 	// 這個類別 如果有一個物件的話 物件也要實作序列化  而 String早就做過 序列化了
