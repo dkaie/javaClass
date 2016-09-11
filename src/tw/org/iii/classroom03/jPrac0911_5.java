@@ -20,6 +20,8 @@ public class jPrac0911_5 extends JFrame{
 	// 這裡指是提供一個結構,這部份課的重點老師 放在 MyPainter.java
 	private MyPainter painter;
 	private JButton clear, undo, redo,save;
+	private MyClock clock;
+	
 	public jPrac0911_5()
 	{
 		setLayout(new BorderLayout());
@@ -29,7 +31,9 @@ public class jPrac0911_5 extends JFrame{
 		undo = new JButton("undo");
 		redo = new JButton("redo");
 		save = new JButton("save");
+		clock = new MyClock();
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
+		top.add(clock); // 掛上 時鐘 類別 的物件
 		top.add(clear);top.add(undo);top.add(redo);top.add(save);
 		add(top, BorderLayout.NORTH);
 		
