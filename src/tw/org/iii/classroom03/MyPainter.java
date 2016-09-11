@@ -16,7 +16,7 @@ public class MyPainter extends JPanel {
 	//我繼承他 所以我也是視窗元件
 	// TODO 這段 有得聽了 1050911 10:12~10:23
 //	private LinkedList<HashMap<String,Integer>> line; // 這個只能存取 一條線上所有的點
-	private LinkedList< LinkedList<HashMap<String,Integer>> > lines; // 這個才能存取 兩條線
+	private LinkedList< LinkedList<HashMap<String,Integer>> > lines , recycle; // 這個才能存取 兩條線
 	
 	// 座標點 用 Hash value來代表 x y
 	// 拿一個資料結構 準備做後續的事
@@ -33,6 +33,7 @@ public class MyPainter extends JPanel {
 	//	addMouseMotionListener(this); // 自己聽
 		
 		lines = new LinkedList<>();
+		recycle = new LinkedList<>();
 	} // 建構子
 	
 	// Button 是 override過來的    所以大家的按鈕都是長那個樣子
@@ -110,6 +111,30 @@ public class MyPainter extends JPanel {
 		repaint(); // 把版面清乾淨
 	}
 	
+	
+	void undo()
+	{	// 上一步
+		
+		// 當我要畫一條新線的時候 recycle內的東西要清掉,老師沒示範 叫我們自己寫
+		
+		if(lines.size() > 0)
+		{
+			recycle.add( lines.removeLast() ); // lines丟掉 recycle撿起來
+			repaint();
+		}
+	}
+	void redo()
+	{	// 下一步
+		
+		// 當我要畫一條新線的時候 recycle內的東西要清掉,老師沒示範 叫我們自己寫
+		
+		if(recycle.size() > 0)
+		{
+			lines.add( recycle.removeLast() ); // recycle丟掉 lines撿起來
+			repaint();
+		}
+		
+	}
 	private class MyAdapter extends MouseAdapter
 	{	// java有  MouseAdapter的類別  這裡老師自己製作 這個類別
 		// Adapter譯為變壓器 AC轉DC 所以這個 類別有轉換東西的意義

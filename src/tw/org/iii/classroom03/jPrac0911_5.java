@@ -15,15 +15,17 @@ public class jPrac0911_5 extends JFrame{
 	
 	// 這裡指是提供一個結構,這部份課的重點老師 放在 MyPainter.java
 	private MyPainter painter;
-	private JButton clear;
+	private JButton clear, undo, redo;
 	public jPrac0911_5()
 	{
 		setLayout(new BorderLayout());
 		
 		// 上面配一個 JPanel
 		clear = new JButton("clear");
+		undo = new JButton("undo");
+		redo = new JButton("redo");
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT));
-		top.add(clear);
+		top.add(clear);top.add(undo);top.add(redo);
 		add(top, BorderLayout.NORTH);
 		
 		painter = new MyPainter();
@@ -45,12 +47,36 @@ public class jPrac0911_5 extends JFrame{
 				doClear();
 			}
 		});
+		undo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 自動產生的方法 Stub
+				doUndo();
+			}
+		});
+		redo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO 自動產生的方法 Stub
+				doRedo();
+			}
+		});
 	}
 	
 	// 清除 是 MyPainter類別在做的
 	private void doClear()
 	{
 		painter.clear();
+	}
+	private void doUndo()
+	{
+		painter.undo();
+	}
+	private void doRedo()
+	{
+		painter.redo();
 	}
 	public static void main(String[] args) {
 		//  自動產生的方法 Stub
