@@ -18,6 +18,10 @@ public class MyPainter extends JPanel {
 //	private LinkedList<HashMap<String,Integer>> line; // 這個只能存取 一條線上所有的點
 	private LinkedList< LinkedList<HashMap<String,Integer>> > lines , recycle; // 這個才能存取 兩條線
 	
+	// TODO homework
+	// homework : 把這裡存成 物件序列化   lines可以序列化  下次叫進來時 可以 undo 和redo動作   因為他是物件
+	// 如何做 物件的指標 指向動作
+	
 	// 座標點 用 Hash value來代表 x y
 	// 拿一個資料結構 準備做後續的事
 	

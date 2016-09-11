@@ -22,7 +22,7 @@ public class jPrac0911_3 {
 		{
 			set.add((int)(Math.random()*10));
 		}
-		StringBuffer sb = new StringBuffer(n); // 你不指定量  電腦預設給你16的capacity 但沒用到就浪費了
+		StringBuffer sb = new StringBuffer(n); // 你不指定陣列大小  電腦預設給你16的capacity 但沒用到就浪費了
 		// 已經泛型整數了 所以 foreach內就是整數
 		for(Integer i:set) sb.append(i);
 		return sb.toString();
