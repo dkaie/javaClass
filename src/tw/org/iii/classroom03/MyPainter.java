@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 //public class MyPainter extends JPanel implements MouseListener,MouseMotionListener
 public class MyPainter extends JPanel {
 	//我繼承他 所以我也是視窗元件
-	// TODO 這段 有得聽了 1050911 10:12~10:23
+	// TODO 這段有得聽了(已聽過) 1050911 10:12~10:23  (大約是錄影檔的 1:09:28)
 //	private LinkedList<HashMap<String,Integer>> line; // 這個只能存取 一條線上所有的點
 	private LinkedList< LinkedList<HashMap<String,Integer>> > lines , recycle; // 這個才能存取 兩條線
 	
@@ -29,12 +29,21 @@ public class MyPainter extends JPanel {
 	{
 		//super();
 		// setBackground(Color.yellow); // 這個是老是用來測試  可改變 java視窗的背景顏色用的
-		System.out.println("測試看建構子有沒有執行");
+		System.out.println("測試看建構子有沒有執行 這段是要配合測試看 PaintComponent有沒有自動執行");
 		MyAdapter adapter = new MyAdapter(); // 針對滑鼠點下去取處理事情
-		addMouseListener(adapter);
-		addMouseMotionListener(adapter);
+
+		
+		// addAncestorListener(listener) 前面的課 是用來偵測 按鈕(是指Button元件嗎?)按下去的動作 
+		// 這堂課是希望偵測 滑鼠的動作
+		// 因為這個類別繼承自 JPanel(這傢伙好像是在管 java window Form 有關的東西)
+		// 所以老師教說我們要自己去 查java API 內的 JPanel那篇
+		// 結果在 祖父類別 找到 addMouseListener()這個跟滑鼠有關的函數 
+		
 	//	addMouseListener(this);
 	//	addMouseMotionListener(this); // 自己聽
+		
+		addMouseListener(adapter);
+		addMouseMotionListener(adapter);
 		
 		lines = new LinkedList<>();
 		recycle = new LinkedList<>();
@@ -42,9 +51,22 @@ public class MyPainter extends JPanel {
 	
 	// Button 是 override過來的    所以大家的按鈕都是長那個樣子
 	
+	
+	// 不是因為呼叫super(),所以 paintComponent() 才會執行       
+	// paintComponent() 是一個 Component  父類別 在定義的時候   就去執行了他的畫面的長相 
+	// 所以paintComponent() 我們沒呼叫 他也會自動去執行 ???
+
 	@Override
 	protected void paintComponent(Graphics g)
-	{	// 畫面的動作? 呈現?
+	{	// 元件外觀的呈現
+		// 畫面的動作? 呈現?
+		
+		// 輸入參數是 父類別定義的   會傳遞一個 Graphics 的物件實體(繪圖的物件實體)
+		
+		// XXX 他是車子 骨子裡是法拉利  不轉型回來 會沒辦法用到這麼多的功能
+		
+		// java的官方文件表示  Graphics傳遞進去的 骨子裡是個 Graphics2D
+		// 所以可以再用他之前 先轉型回來
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D)g;
 		
@@ -53,7 +75,7 @@ public class MyPainter extends JPanel {
 		g2d.setColor(Color.BLUE);
 		
 		// 測試可否畫出圓
-//		g2d.fillOval(0, 0, 30, 30);  // 前兩個為圓心 在 視窗上的作標位置
+//		g2d.fillOval(0, 0, 30, 30);  // 前兩個為圓 被方形框起來  方形 在 視窗左上角的座標位置
 //		g2d.drawOval(100,100,30,30);
 		
 		g2d.setStroke(new BasicStroke(4)); // 畫筆 4的粗細
@@ -80,6 +102,8 @@ public class MyPainter extends JPanel {
 	// 一個類別為抽象類別 但不一定要有 抽象方法  你找我建構 物件實體 你無聊  我期待子類別出現  你想override的自己去做
 	// 但有 抽象方法的類別 必須為抽象類別
 
+	// 這段是 implements MouseListener後 會出現紅色 底線 游標移到底線那裡 會跳出框框  選  叫電腦幫我們
+	// 實作 未寫的 方法 ,然後就會跳出底下這堆了
 //	@Override
 //	public void mouseClicked(MouseEvent e) {	
 //		System.out.println("Clicked"); // 滑鼠按下 移動(這樣就有改變位置的情況發生) 在放開 就不算 click
@@ -145,7 +169,7 @@ public class MyPainter extends JPanel {
 		
 		@Override
 		public void mouseDragged(MouseEvent e) {
-			// TODO 自動產生的方法 Stub
+			// 
 			super.mouseDragged(e);
 			//System.out.println("Dragged: "+e.getX()); // 測試 這個方法是否有效
 			addPoint(e);
@@ -155,7 +179,7 @@ public class MyPainter extends JPanel {
 
 		@Override
 		public void mousePressed(MouseEvent e) {
-			// TODO 自動產生的方法 Stub
+			// 
 			super.mousePressed(e);
 			
 			// 按下滑鼠的同時  新增一個 可以儲存 畫一條線所需點 的空間	

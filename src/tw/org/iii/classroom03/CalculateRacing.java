@@ -37,7 +37,7 @@ public class CalculateRacing extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
+				// 
 				go();
 			}
 		});
@@ -69,7 +69,7 @@ public class CalculateRacing extends JFrame{
 		{
 			whichLane = n;  // 哪台車在 哪條跑道 在建構子中決定
 		}
-		// TODO 10509111436 怎麼快捷鍵 ?
+		//  10509111436 
 		@Override
 		public void run()
 		{

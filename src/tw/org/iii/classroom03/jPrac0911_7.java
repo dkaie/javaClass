@@ -46,12 +46,10 @@ public class jPrac0911_7 {
 
 class Brad681 extends Thread
 {	
-	// 這個不能再繼承其他類別
+	// 用繼承Thread的寫法後  就不能再繼承其他類別
 	
+	//Brad681物件實體 為一個Thread物件
 	
-	// Brad681為一個 thread
-	// 表現在 override run方法內
-	// TODO 10509111403 看一下老師怎看快捷鍵的
 	private String name;
 	private int delay;
 	Brad681(String name,int delay)
@@ -59,10 +57,21 @@ class Brad681 extends Thread
 		this.name = name;
 		this.delay = delay;
 	}
+	
+	// Brad681為一個 thread,表現在 override run方法內
+	// ,如果寫在其他方法,那只是個物件方法
+	// 所以如果 程式碼 要表現出 有執行緒的生命特徵  就要寫再 override run方法內
+	// TODO 1050913晚 聽到這    10509111403  錄影檔時間 0:43:14
+	
+	// 底下這些好像是 在key完類別 繼承 Thread類別後
+	// 在類別內 打 "run" 再 Alt+/  會跳出框框    選  run   然後電腦就幫你寫好下面這段
 	@Override
 	public void run()
 	{
 		//---------------執行緒生命開始----------------
+		
+		// super.run();  // 老師:這個要寫不寫沒關係 因為裡面是空的
+		
 		//第1個 i 和 第2個i 執行的間隔時間  會大於等於 下方的 0.1秒
 		
 		for(int i =0 ; i< 10 ; i++)
@@ -85,12 +94,13 @@ class Brad681 extends Thread
 
 class Brad682 implements Runnable
 {	
+	// 使用 implement Runable介面 之後 可以寫成 執行緒的做法 又可在繼承其他類別
 	//他不是執行緒  他做出的物件實體沒有start()
 	// 擴充性高 : 這個可以 再 繼承 其他類別
 	
 	// Brad681為一個 thread
 	// 表現在 override run方法內
-	// TODO 10509111403 看一下老師怎看快捷鍵的
+	// TODO Runnable介面  看看要不要 聽一下錄影檔  在 10509111403開始找看看
 	private String name;
 	private int delay;
 	Brad682(String name,int delay)
