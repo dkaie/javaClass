@@ -1,8 +1,15 @@
 package tw.org.iii.classroom03;
+//第一道敘述 寫出  package name 所在位置
 
 public class HelloW {
 
 	public static void main(String[] args) {
+		
+		// TODO Auto-
+		// FIXME bug here
+		// XXX
+		
+		
 		// 
 		System.out.println("Hello WWW111111");
 		//10509081945測試更改
