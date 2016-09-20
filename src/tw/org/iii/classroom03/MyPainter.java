@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 //public class MyPainter extends JPanel implements MouseListener,MouseMotionListener
 public class MyPainter extends JPanel {
 	//我繼承他 所以我也是視窗元件
-	// TODO 這段有得聽了(已聽過) 1050911 10:12~10:23  (大約是錄影檔的 1:09:28)
+	// TODO (已聽過)這段有得聽了 1050911 10:12~10:23  (大約是錄影檔的 1:09:28)
 //	private LinkedList<HashMap<String,Integer>> line; // 這個只能存取 一條線上所有的點
 	private LinkedList< LinkedList<HashMap<String,Integer>> > lines , recycle; // 這個才能存取 兩條線
 	

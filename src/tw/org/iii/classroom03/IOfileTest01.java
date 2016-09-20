@@ -1,5 +1,5 @@
 package tw.org.iii.classroom03;
-
+// 本檔案 對應的是 老師的 Brad47.java 教學範例檔
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -52,8 +52,10 @@ public class IOfileTest01 {
 			//e.printStackTrace();
 		}
 	}
+	
+	//---------- FileReader  專門用來讀字元  單純讀文字檔  ----------
 	public static void FileReader_class_practice()
-	{	// FileReader  專門用來讀字元  單純讀文字檔 
+	{
 		// Read class 的源頭 是 inputStream
 		File f1 = new File("dir1/Brad01.txt");
 		try {
@@ -72,34 +74,60 @@ public class IOfileTest01 {
 	
 	// ftp傳檔時會問你用 ASCII傳(FileReader 較快) 或是 binary傳(FileInputStream)
 	
+	
+	//--------- FileInputStream 用在處理 各式檔案,用他去讀文字檔要另外寫邏輯去處理文字檔 -------------
 	public static void FileInputStream_class_practice()
-	{	// FileInputStream 用在處理 各式檔案,用他去讀文字檔要另外寫邏輯去處理文字檔
+	{	
 		File f1 = new File("dir1/Brad01.txt");
 		long len = f1.length();
+		// int 的範圍 2^32=4億多 = 4GB 分正負號 2GB
+		// 4GB的量來描述一個檔案長度還不夠用 所以 用long,其範圍2^64,所以length() 的回傳值用long來接 ??
 		try{
 			FileInputStream fin = new FileInputStream(f1);
 			
 //			int c1 = fin.read();	// read()函數   如果 讀到Stream結尾 會回傳 -1
 //			System.out.println(c1); // 這是一個byte的資料 會印出ASCII碼
 //			System.out.println((char)c1); // 強制轉型
-			
-			//----------處理中文--------
+//			
+//			//--------------處理字元   第1~2版--------------
 //			int c ;
-//			byte[] temp = new byte[3];
-//			while( (c = fin.read()) != -1 )	// read()函數   如果 讀到Stream結尾 會回傳 -1
+//			byte[] temp = new byte[3];	// 陣列大小設為3 又把 temp陣列 丟進去String()
+//										// ,也就是說 一次一次讀取,每次讀取 3 byte的量
+//										// 每一次都用 3個byte構成 1個字串
+//			while( (c = fin.read()) != -1 )
 //			{
+//				// read()函數   如果 讀到Stream結尾 會回傳 -1
+//				// 去看java API 有寫 read() 會回傳  你讀多少量進去
+//			
+//				//----------- 處理字元   第1版(僅英文字)-----------
 //				System.out.print((char)c);// 中文字占3個byte,但一次只讀一個byte所以中文字會讀出亂碼
-			
-			// TODO  這裡 弄清楚一下
-//				System.out.print(new String(temp,0,c)); // 從0開始 到第c個
+//			
+//				//----------- 處理字元   第2版(可處理中文字元 但有瑕疵)-----------
+//				System.out.print(new String(temp,0,c)); // 把陣列的 從0開始 到第c個 轉為字串
 //				// Big5    2^16=65536 這個數量 小於 中文字的總數量
-//				// UTF-8   2^24	
+//				// UTF-8   2^24                   這個數量可以容納很多中文字  (24是bit嗎 所以 = 3 byte ????)
+//				// 上述容納文字的說法應該是一個粗略的概念 因為網路查的結果 UTF-8容納很多國的語言
+//				// ,而且 有編碼規則 有些 位元 好像就是用在這些規則上,並不是說 幾個位元就對應 1個中文字
+//				// 因為 老師之前 有教我們把 專案 改成使用UTF-8編碼 所以這個專案的一個中文字 都會佔3 byte 
+//			
+//				// 去看java API 在建構式的地方有寫說  輸入參數可放byte陣列(就是可用byte陣列構成字串的意思)
+//				// String(Array,Start,Length)  你一次送進來多少的量 就show多少(就把多少的字元轉成字串?)
+//			
+//				// 這裡 弄清楚一下 1050903 11:10     錄影檔時間 1:50:00
+//				// TODO 1050920晚聽到這   1050903 11:26      錄影檔時間  2:05:32
 //			}
 		
-			//----------處理中文 和   其他各式檔案?--------
+			//----------- 處理字元   第3版(可處理中英文字元)-----------
+			
+			// 第2版的作法 如果 遇到像 "ABCD你好" 這樣的字串 中文字一樣顯是亂碼
+			// (因為每 3 byte 轉 一中文字 的 作法就被打亂了)
+			// 第3版的概念是 準備一個大臉盆 先看File類別宣告的物件有多大
+			// ,然後在設定臉盆大小,然後再把Stream內的字元一次全部沖進臉盆內
+			// ,在把整個臉盆拿去讀取 轉成 字串
+
 			int c ;
 			byte[] temp = new byte[(int)len]; // 陣列的 index最大只有到int
-			// int 的範圍 2^x=4億多 = 4GB 分正負號 2GB 所以不要開大於 2GB的 檔     大於2GB 要用迴圈分批讀
+			// int 的範圍 2^32=4億多 = 4GB 分正負號 2GB 所以不要開大於 2GB的 檔     大於2GB 要用迴圈分批讀
 			fin.read(temp);
 			System.out.println(new String(temp));
 			

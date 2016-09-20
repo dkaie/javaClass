@@ -76,7 +76,6 @@ public class jPrac0911_5 extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				// TODO 自動產生的方法 Stub
 				doSave();
 			}
 		});

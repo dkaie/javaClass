@@ -22,7 +22,7 @@ public class TCPReciver {
 //			// 物件實體
 //			
 //			System.out.println("before");
-//			//TODO 10509041303聽一下( 9/4 pm 收音不佳)
+//			//TODO ( 9/4 pm 收音不佳)10509041303聽一下
 			// 1050908晚自習 聽到 10509041317 0:16:32的地方
 			// 10509041305~09老師離開mic 沒聲音
 //			Socket socket = server.accept(); // 回應對方 三方交握(自己上網查 資料多到爆),傳回socket

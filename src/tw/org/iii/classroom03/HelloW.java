@@ -5,7 +5,7 @@ public class HelloW {
 
 	public static void main(String[] args) {
 		
-		// TODO Auto-
+		// TODO Auto-generated method stub
 		// FIXME bug here
 		// XXX
 		

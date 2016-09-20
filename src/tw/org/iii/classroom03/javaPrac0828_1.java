@@ -37,7 +37,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 		JPanel top = new JPanel(new FlowLayout(FlowLayout.LEFT)); // 這只是個區域變數 無繼承 實作介面的關係 ?
 		// 使用JPanel類別來 做版面配置
 		
-		// TODO 這裡不懂( 暫時理解 ?  8/28 am 錄影沒收到音)  參數內填入 new物件實體  
+		// TODO ( 暫時理解 ?  8/28 am 錄影沒收到音)這裡不懂  參數內填入 new物件實體  
 		//setLayout(new FlowLayout()); // 方法(new出物件實體)
 		//setLayout(new FlowLayout(FlowLayout.RIGHT)); // 靠右側
 		//add(open); add(save); add(exit);
@@ -81,7 +81,7 @@ public class javaPrac0828_1 extends JFrame implements ActionListener{
 		// 
 		// 因為它本身是static? 所以自己會去做一個載入的動作(載啥?)
 		
-		// TODO 這裡不懂( 暫時理解 ? )  main()裡面直接new建構子   
+		// TODO ( 暫時理解 ? )這裡不懂  main()裡面直接new建構子   
 		new javaPrac0828_1();
 	} // main
 

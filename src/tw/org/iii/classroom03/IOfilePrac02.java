@@ -18,7 +18,7 @@ public class IOfilePrac02 {
 			// 把文字資料換成Reader 再來 readLine( )
 			
 			//irs的物件實體 is a Reader類別
-			//TODO  這裡聽一下錄影  10509031430(已解決)
+			//TODO  (已解決)這裡聽一下錄影  10509031430
 			// 寫java的網際網路程式碼段時  只有InputStream/OutputStream  沒有Reader/Writer 所以要用  串接  來寫 
 
 			String line = br.readLine();

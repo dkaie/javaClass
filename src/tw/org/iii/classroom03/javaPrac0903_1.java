@@ -28,7 +28,7 @@ public class javaPrac0903_1 extends JFrame {
 	private JButton open, save, exit;
 	private JTextArea edit;
 	
-	//TODO 這裡聽一下 錄影  10509031338(已解決)
+	//TODO (已解決)這裡聽一下 錄影  10509031338
 	private File openFile; // 師:把這個openFile提升為 我這個類別所擁有的屬性。
 	// 嗯....就是把openFile從 這個類別的區域變數 移到這來 變成這個類別內的全域變數
 	

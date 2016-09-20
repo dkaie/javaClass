@@ -3,12 +3,11 @@ package tw.org.iii.classroom03;
 public class helleW02 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		byte a = 10, b = 0;
 		int c = a/b;
-		System.out.println(c); // byte¸ò byte¹Bºâ ¨ä­È¬°int
-		// byte short int ¹Bºâ«áªºµ²ªG³£¬Oint
-		// long ¹Bºâµ²ªG ÁÙ¬O long
+		System.out.println(c); // byteï¿½ï¿½ byteï¿½Bï¿½ï¿½ ï¿½ï¿½È¬ï¿½int
+		// byte short int ï¿½Bï¿½ï¿½áªºï¿½ï¿½ï¿½Gï¿½ï¿½ï¿½Oint
+		// long ï¿½Bï¿½âµ²ï¿½G ï¿½Ù¬O long
 		
 		
 		

@@ -8,7 +8,7 @@ public class javaPrac0828_2 {
 		Brad352 tire1 = new Brad352();
 		Brad353 tire2 = new Brad353(); 
 		
-		// TODO 這裡不懂( 暫時理解 ? ) 參數內填入別的物件
+		// TODO ( 暫時理解 ? )這裡不懂 參數內填入別的物件
 		car.m1(tire1);
 	//	car.m1(new Brad352()); // 這列是自己在  0830晚自習 自己加上去的
 	}
