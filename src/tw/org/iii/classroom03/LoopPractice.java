@@ -4,7 +4,7 @@ public class LoopPractice {
 
 	public static void main(String[] args) {
 		
-//		ForPractice01();		// 無窮迴圈
+//		ForPractice01();		// 無窮迴圈//
 //		ForPractice02();		// 迴圈條件內寫程式碼
 //		MultiplyTable();		// XXX 九九乘法表 三層迴圈
 //		prime_numbe_check00();	// 這個玩意很像是複製老師教的程式碼 再自己改 沒寫完成的

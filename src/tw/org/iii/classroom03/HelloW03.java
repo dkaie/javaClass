@@ -6,7 +6,7 @@ public class HelloW03 {
 
 	public static void main(String[] args) {
 		
-	//	TypePractice();		// char byte int short資料型別認識
+	//	TypePractice();		// char byte int short資料型別認識//
 		TypePractice02();	// random函數 , if else 迴圈
 	//	LeapYearCalcu();	// XXX 閏年計算( if 巢狀迴圈 ) 不確定有沒有完成
 		System.exit(0); // 傳回給作業系統 0 表示正常結束 沒事
