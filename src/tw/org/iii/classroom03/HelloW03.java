@@ -82,7 +82,7 @@ public class HelloW03 {
 	} // main()
 
 	public static void TypePractice() {
-		// char �d��O 2^16
+		// char 的範圍大小為 2^16
 		char v1 = 'a';
 		char v2 = 98; // ASCII : b
 		char v3 = '資';
