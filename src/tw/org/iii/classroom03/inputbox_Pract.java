@@ -4,12 +4,12 @@ import javax.swing.JOptionPane;
 public class inputbox_Pract {
 
 	public static void main(String[] args) {
-		// 
-		String strYear = 
-				JOptionPane.showInputDialog("Year");
-		String strMonth = 
-				JOptionPane.showInputDialog("Month");
-		int intYear = Integer.parseInt(strYear);
+		
+		// 輸入對話盒 練習
+		
+		String	strYear	 = JOptionPane.showInputDialog("Year");
+		String	strMonth = JOptionPane.showInputDialog("Month");
+		int		intYear	 = Integer.parseInt(strYear);
 		System.out.println(intYear + "/" + strMonth);
 	}
 
