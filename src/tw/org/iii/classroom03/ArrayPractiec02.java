@@ -6,7 +6,7 @@ public class ArrayPractiec02 {
 
 	public static void main(String[] args) {
 
-		//ArrayIndexTypeTest();		// 一些陣列的規則說明
+		//ArrayIndexTypeTest();		// 一些陣列的規則說明//
 		//MultyDimensionArray();	// 多維陣列
 		//TwoDimensionArray();		// 二維陣列
 		//foreachPractice01();		// for each
