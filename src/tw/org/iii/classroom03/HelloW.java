@@ -12,7 +12,7 @@ public class HelloW {
 		// 
 		System.out.println("Hello WWW111111");
 		//10509081945測試更改
-		System.out.println("okokokokokko");
+		System.out.println("ok");
 	}
 }
 class AAA extends Thread

@@ -10,14 +10,14 @@ public class LoopPractice {
 //		prime_numbe_check00();	// 這個玩意很像是複製老師教的程式碼 再自己改 沒寫完成的
 //		prime_numbe_check01();	// 質數判斷 v1.0
 //		prime_numbe_check02();	// 1~100排成
-		forLoopPractice05();	// 幼稚園等級的 for + if練習
-//		forLoopPractice06();
-//		forLoopPractice07();
-//		NotUseArray();
-//		ArrayPractice();
-//		ModifyToArray();
-//		lead_dice();
-//		lead_dice_teacher();
+//		forLoopPractice05();	// 幼稚園等級的 for + if練習
+//		forLoopPractice06();	// 迴圈敘事句  很像 GOTO的東西
+//		forLoopPractice07();	// continue
+//		NotUseArray();			// 用switch寫 骰子1~6
+//		ArrayPractice();		// 基礎陣列練習
+//		ModifyToArray();		// XXX 用Array寫 骰子1~6
+		lead_dice();			// 灌鉛骰子
+//		lead_dice_teacher();	// 灌鉛骰子(老師公布的寫法)
 		
 	} // main
 	
