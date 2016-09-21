@@ -5,16 +5,15 @@ import java.util.Arrays;
 public class ArrayPractiec02 {
 
 	public static void main(String[] args) {
-		// 
-		//ArrayIndexTypeTest();
-		//MultyDimensionArray();
-		//TwoDimensionArray();
-		//foreachPractice01();
-		//pokerShuffle();
+
+		//ArrayIndexTypeTest();		// 一些陣列的規則說明
+		//MultyDimensionArray();	// 多維陣列
+		//TwoDimensionArray();		// 二維陣列
+		//foreachPractice01();		// for each
+		pokerShuffle();				// XXX 撲克牌 洗牌 發牌(for迴圈版)
 		//---------------1050821 AM-------------------
-		ForWhilePractice();
-		
-		
+		ForWhilePractice();			// while練習
+			
 	} // main
 	public static void ForWhilePractice()
 	{
@@ -34,9 +33,9 @@ public class ArrayPractiec02 {
 			sum+=i++;
 		}
 		System.out.println("1+2+3+...+n = "+sum);
-		
-		
+			
 	} // ForWhilePractice()
+	
 	public static void pokerShuffle()
 	{
 		int[] poker = new int[52]; // 初值 全都為0
@@ -134,6 +133,7 @@ public class ArrayPractiec02 {
 		}
 		
 	} // pokerShuffle()
+	
 	public static void foreachPractice01()
 	{
 		int[] a = {1,2,3,4,5};
@@ -149,12 +149,14 @@ public class ArrayPractiec02 {
 		c[0][1][0] = 2;
 		c[1][0][0] = 3;
 		c[1][1][0] = 4;
-		// for-each 跑a陣列裡面的每一個元素 把元素拿出來放在v 去玩v 只玩值 只玩值的話用這個比較方便
+		
 		System.out.println("--------a陣列---------");
+		// for-each 跑a陣列裡面的每一個元素 把元素拿出來放在v 去玩v 只玩值 只玩值的話用這個比較方便
 		for(int v: a)
 		{ // a裡面的元素是整數
 			System.out.println(v);
 		}
+		
 		System.out.println("------b陣列-----------");
 		for(int[] v1 :b)
 		{	// b看下去的第一層元素內內的是一為陣列 所以要用一為陣列v1來接
@@ -164,6 +166,7 @@ public class ArrayPractiec02 {
 			}
 			System.out.println("+++++++++第2層結束線--");
 		}
+		
 		System.out.println("------c陣列-----------");
 		for(int[][] v1 :c)
 		{	
@@ -177,6 +180,7 @@ public class ArrayPractiec02 {
 		}
 		
 	} // foreachPractice01()
+	
 	public static void TwoDimensionArray()
 	{	// 師:多維是一個維度中還有一個維度
 		int[][] a;
@@ -207,6 +211,7 @@ public class ArrayPractiec02 {
 		}
 		
 	}// TwoDimensionArray()
+	
 	public static void MultyDimensionArray()
 	{	// 師:多維是一個維度中還有一個維度
 		int[][] a;
@@ -219,6 +224,7 @@ public class ArrayPractiec02 {
 		System.out.println(a[1].length);
 		System.out.println(a[1][0]);
 	}
+	
 	public static void ArrayIndexTypeTest()
 	{
 		int[] a;

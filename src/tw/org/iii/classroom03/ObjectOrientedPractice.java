@@ -1,13 +1,14 @@
 package tw.org.iii.classroom03;
 
+// 這個 java檔  會用到  Bike.java
+
 public class ObjectOrientedPractice {
 
 	public static void main(String[] args) {
-		// 
 		
-		//propertyPractice();
-		//ooPractice();
-		StringPractice();
+		//propertyPractice();	// 類別宣告練習
+		ooPractice();			// XXX 類別宣告練習  首度使用 其他java檔
+		StringPractice();		// 類別   字串   練習
 		
 	} // main
 
@@ -26,20 +27,19 @@ public class ObjectOrientedPractice {
 		System.out.println(s4.length());
 		System.out.println("Hello world".length());
 		// length : 陣列在建構時，你就賦予他這項屬性，但字串則是看你給幾個字元，再用方法去計算長度
-		// 所以陣列的長度式呼叫屬性，  字串的長度則是呼叫方法
-		
-		
-		
-		
-		
+		// 所以陣列的長度是呼叫屬性，  字串的長度則是呼叫方法		
 	}
+	
 	public static void ooPractice()
 	{
 		Bike b1 = new Bike();
 		Bike b2 = new Bike();
+		
+		// TODO 有空這裡聽一下  下面的註解寫到一半   1050821 PM查看看
 		System.out.println(b1);// 的類別物件實體在記憶體的位址(參考位址)
 		System.out.println(b2);
 	}
+	
 	public static void propertyPractice()
 	{	
 		Bike myBike, urBike;
