@@ -7,10 +7,10 @@ public class LoopPractice {
 //		ForPractice01();		// 無窮迴圈
 //		ForPractice02();		// 迴圈條件內寫程式碼
 //		MultiplyTable();		// XXX 九九乘法表 三層迴圈
+//		prime_numbe_check00();	// 這個玩意很像是複製老師教的程式碼 再自己改 沒寫完成的
 //		prime_numbe_check01();	// 質數判斷 v1.0
 //		prime_numbe_check02();	// 1~100排成
-		prime_numbe_check03();
-//		forLoopPractice05();
+		forLoopPractice05();	// 幼稚園等級的 for + if練習
 //		forLoopPractice06();
 //		forLoopPractice07();
 //		NotUseArray();
@@ -74,10 +74,11 @@ public class LoopPractice {
 			boolean isOK = true;
 			for(int k = 2; k<i; k++)
 			{	
-				if(i%k==0) // 整除 不是質數
+				if(i % k == 0) // 整除 就不是質數
 					isOK = false;
 			}
-			System.out.print(i+"\t");
+			//System.out.print(i+"\t");
+			System.out.print(i + (isOK?"*":" ") +"\t");
 			if (i % 10 == 0) // 每逢10 20 30
 				System.out.println();	// 換列	
 		}
@@ -86,15 +87,18 @@ public class LoopPractice {
 	public static void prime_numbe_check01()
 	{
 		for(int j=0; j<10 ;j++)
-		{	for(int i=1; i<=10; i++)
+		{	
+			for(int i=1; i<=10; i++)
 			{
-				int v = j*10+i;
+				int v = j*10+i; // 製造1~100的數字
 				// 判斷是否為質數
 				boolean isOK = true;
 				for(int k = 2; k<=v/2; k++)
-				{
+				{	// TODO 有空聽一下 10508201432
+					// 老師有提到 比質數 不用全部比 只需要比一半 ==> 這是數學邏輯問題 自己有空慢慢想
+					// 所以for迴圈的判斷式 除以2
 					if(v % k == 0)
-					{	// 餘數等於0， 整除，不是質數
+					{	// 餘數等於0， 整除，就不是質數
 						isOK = false;
 						break; // 讀到break 會離開 他所在的迴圈結構
 					}
@@ -105,19 +109,18 @@ public class LoopPractice {
 		}
 	} // void prime_numbe_check01()
 	
-	public static void prime_numbe_check03()
+	public static void prime_numbe_check00()
 	{
-		for(int j=1; j<=10 ;j++)
+		for(int j=0; j<10 ;j++)
 		{	
-			//for(int i=j*10; i<=10; i++)
-			for(int i=j*10; i<=10; i--)
+			for(int i=1; i<=10; i++)
 			{
 				int v = j*10+i;
 				System.out.print(v+"\t");
 			}
 			System.out.println();
 		}		
-	} // void prime_numbe_check03()
+	} // void prime_numbe_check00()
 	
 	public static void forLoopPractice05()
 	{

@@ -18,5 +18,4 @@ public class inputbox_Pract {
 		
 		System.out.println(intYear + "/" + strMonth);
 	}
-
 }

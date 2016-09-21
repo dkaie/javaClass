@@ -8,8 +8,7 @@ public class HelloW {
 		// TODO Auto-generated method stub
 		// FIXME bug here
 		// XXX
-		
-		
+			
 		// 
 		System.out.println("Hello WWW111111");
 		//10509081945測試更改

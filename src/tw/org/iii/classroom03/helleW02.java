@@ -10,7 +10,6 @@ public class helleW02 {
 		// long 運算後的結果為 long
 		
 		
-		
 	}
 
 }

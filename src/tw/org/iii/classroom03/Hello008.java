@@ -9,7 +9,7 @@ public class Hello008 {
 		Switch_month();		// Switch"疊在一起"
 		final_Var_Practice(); // final後的變數使用
 		
-	} // main
+	} // main//
 
 	public static void LogicalPractice()
 	{

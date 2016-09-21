@@ -14,7 +14,6 @@ public class HelloW03 {
 	} // main()
 		
 
-	
 	public static void TypePractice() {
 		// char 的範圍大小為 2^16
 		char v1 = 'a';
