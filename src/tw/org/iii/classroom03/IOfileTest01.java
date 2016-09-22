@@ -39,6 +39,8 @@ public class IOfileTest01 {
 			// 指標 指到 檔案的尾端  不會把原檔清掉 資料從指標的地方寫下去
 			
 			fout.write("Hello,Brad02\n".getBytes()); // 把物件轉成byte陣列 讓它傳送出去
+			// write()方法 會 一個byte 一個byte的寫出去(好像在java API內有明確的寫到)
+			// 剛剛的read()方法 則是 一個byte 一個byte的讀進來?????
 			
 			// 微軟上 最好用 \r\n做換列  UNIX用 \n即可換列
 			//fout.append(); // 根本沒有這種方法可呼叫 考java認證考試  考題會出現這玩意來騙考生
@@ -54,10 +56,24 @@ public class IOfileTest01 {
 	}
 	
 	//---------- FileReader  專門用來讀字元  單純讀文字檔  ----------
+	// 任何 中英文 的單一個字都是一個 character??
+	// Reader類別的建構子 為 protect 所以無法隨便叫用 除非你認他為父類別 要不然沒辦法建構這個類別
+	// Reader類別 內的 read()方法 在 java API中有明確的寫出 他讀的昰字元
+	// 而FileInputStream宣告的物件 讀的東西 未必一定是字元 有可能是檔案或其他的東西
+	// Reader的源頭是InputStream?
+	
+	// 源頭是Reader,透過InputStream轉成Reader(InputStreamReader吧)
+	// ,在由Reader繼承出產生出一個FileReader,然後就可以使用某人(誰啊  應該是FileReader吧)的物件實體
+	
+	// 去看java API的FileReader類別, Read類別內有抽象方法,這個方法是在InputStreamReader類別時 實作的
 	public static void FileReader_class_practice()
 	{
 		// Read class 的源頭 是 inputStream
 		File f1 = new File("dir1/Brad01.txt");
+		
+		// 這裡的 try catch 是 key完 new FileReader後底下會有紅線 游標移到紅線停一下
+		// ,會跳出框框給你選 解決錯誤的方法 ,會跳出這個錯誤好像是因為 好像FileReader類別,有 throws到 IOException
+		// ,所以選框框內的 叫電腦自動幫我們加上try catch的那個選項
 		try {
 			FileReader reader = new FileReader(f1);
 			int c;
