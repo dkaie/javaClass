@@ -23,7 +23,7 @@ public class LoopPractice {
 	
 	public static void ForPractice01()
 	{
-		// TODO 這裡有空可以聽一下 看老師怎麼講無窮迴圈的  10508201432
+		// TODO 有空可以聽一下 看老師怎麼講無窮迴圈的  10508201432
 		// 典型的無窮迴圈寫法 好像是for裡面沒寫都視為 true的樣子
 //		for(;;)
 //		{

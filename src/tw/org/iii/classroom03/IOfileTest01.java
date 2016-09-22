@@ -26,6 +26,8 @@ public class IOfileTest01 {
 		
 	} // main( )
 
+	
+	// 1050903 11:55      錄影檔時間  2:34:33
 	public static void FileOutputStream_class_practice()
 	{
 		File f1 = new File("dir1/Brad03.txt");
@@ -129,8 +131,8 @@ public class IOfileTest01 {
 //				// 去看java API 在建構式的地方有寫說  輸入參數可放byte陣列(就是可用byte陣列構成字串的意思)
 //				// String(Array,Start,Length)  你一次送進來多少的量 就show多少(就把多少的字元轉成字串?)
 //			
-//				// 這裡 弄清楚一下 1050903 11:10     錄影檔時間 1:50:00
-//				// TODO 1050920晚聽到這   1050903 11:26      錄影檔時間  2:05:32
+//				// TODO (已解決)這裡 弄清楚一下 1050903 11:10     錄影檔時間 1:50:00
+//				// 1050903 11:26      錄影檔時間  2:05:32
 //			}
 		
 			//----------- 處理字元   第3版(可處理中英文字元)-----------

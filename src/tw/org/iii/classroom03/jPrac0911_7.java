@@ -30,7 +30,7 @@ public class jPrac0911_7 {
 		// 加上 thread.sleep() 就可以很清楚的看到 obj1 obj2會同時執行 
 		
 		//obj3.start();
-		t3.start(); // TODO 15:40  
+		t3.start(); // TODO 1050922晚自習聽到這    15:40     1050911 15:36    錄影檔時間 2:16:21
 		
 		try {
 			obj2.join();
@@ -100,7 +100,7 @@ class Brad682 implements Runnable
 	
 	// Brad681為一個 thread
 	// 表現在 override run方法內
-	// TODO Runnable介面  看看要不要 聽一下錄影檔  在 10509111403開始找看看
+	// TODO 1050922晚自習聽到這    Runnable介面  看看要不要 聽一下錄影檔  在 10509111403開始找看看      錄影檔時間 0:42:55
 	private String name;
 	private int delay;
 	Brad682(String name,int delay)

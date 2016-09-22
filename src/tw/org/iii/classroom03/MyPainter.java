@@ -173,8 +173,11 @@ public class MyPainter extends JPanel {
 			super.mouseDragged(e);
 			//System.out.println("Dragged: "+e.getX()); // 測試 這個方法是否有效
 			addPoint(e);
-			// TODO 這裡聽一下
-			repaint(); // 作重畫的動作 第二個點要作repaint,因為內部類別方便存取外部類別的屬性和方法 ,repaint是??的方法  10509111143
+			// TODO (已解決)這裡聽一下 10509111143
+			repaint(); // 做重畫的動作 第二個點要做repaint 
+						// ,repaint()函數  是  MyPainter(JPanel)的方法  
+						// ,而目前所位在的昰MouseAdapter類別,之所以可以叫用這個方法
+						// ,是因為內部類別方便存取外部類別的屬性和方法
 		}
 
 		@Override
