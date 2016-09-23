@@ -1,5 +1,7 @@
 package tw.org.iii.classroom03;
 
+// XXX proj06 1A2B 猜數字遊戲
+
 import javax.swing.JOptionPane;
 
 public class GuessNumber {

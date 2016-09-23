@@ -2,6 +2,8 @@ package tw.org.iii.classroom03;
 
 // 這個 java檔  會用到  IDcard.java
 
+// XXX proj07 身份證字號產生器
+
 public class UseIDclass {
 	
 	public static void main(String[] args) {

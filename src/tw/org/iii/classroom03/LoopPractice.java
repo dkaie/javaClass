@@ -6,7 +6,7 @@ public class LoopPractice {
 		
 //		ForPractice01();		// 無窮迴圈
 //		ForPractice02();		// 迴圈條件內寫程式碼
-//		MultiplyTable();		// XXX 九九乘法表 三層迴圈
+//		MultiplyTable();		// XXX proj03 九九乘法表 三層迴圈
 //		prime_numbe_check00();	// 這個玩意很像是複製老師教的程式碼 再自己改 沒寫完成的
 //		prime_numbe_check01();	// 質數判斷 v1.0
 //		prime_numbe_check02();	// 1~100排成
@@ -15,7 +15,7 @@ public class LoopPractice {
 //		forLoopPractice07();	// continue
 //		NotUseArray();			// 用switch寫 骰子1~6
 //		ArrayPractice();		// 基礎陣列練習
-//		ModifyToArray();		// XXX 用Array寫 骰子1~6
+//		ModifyToArray();		// XXX proj04 用Array寫 骰子1~6
 		lead_dice();			// 灌鉛骰子
 //		lead_dice_teacher();	// 灌鉛骰子(老師公布的寫法)
 		

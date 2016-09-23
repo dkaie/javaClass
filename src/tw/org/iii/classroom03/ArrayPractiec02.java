@@ -10,7 +10,7 @@ public class ArrayPractiec02 {
 		//MultyDimensionArray();	// 多維陣列
 		//TwoDimensionArray();		// 二維陣列
 		//foreachPractice01();		// for each
-		pokerShuffle();				// XXX 撲克牌 洗牌 發牌(for迴圈版)
+		pokerShuffle();				// XXX proj02 撲克牌 洗牌 發牌(for迴圈版)
 		//---------------1050821 AM-------------------
 		ForWhilePractice();			// while練習
 			

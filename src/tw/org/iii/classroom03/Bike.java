@@ -1,7 +1,8 @@
 package tw.org.iii.classroom03;
 // Object-oriented practice
 
-// ObjectOrientedPractice.java 有用到 本檔
+// ObjectOrientedPractice.java	有用到 本檔
+// javaPrac0827_2.java			有用到 本檔
 
 
 public class Bike {

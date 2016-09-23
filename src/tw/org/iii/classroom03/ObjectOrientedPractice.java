@@ -7,7 +7,7 @@ public class ObjectOrientedPractice {
 	public static void main(String[] args) {
 		
 		//propertyPractice();	// 類別宣告練習
-		ooPractice();			// XXX 類別宣告練習  首度使用 其他java檔
+		ooPractice();			// XXX proj05 類別宣告練習  首度使用 別的java檔內的類別
 		StringPractice();		// 類別   字串   練習
 		
 	} // main

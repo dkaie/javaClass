@@ -3,18 +3,20 @@ package tw.org.iii.classroom03;
 // 一個 java檔 會有一個主類別 前面 掛 public主類別
 // ，主類別名稱須和 java主檔名相同
 
+//這個 java檔  會用到  Bike.java
+
 public class javaPrac0827_2 {
 
 	public static void main(String[] args) {
-		// 
-		//testUseClass();
-		//testGetNumberFormString();
-		
+ 
+//		testUseClass();				// 這個有呼叫 Bike類別的 靜態變數 來測試使用
+//		testGetNumberFormString();	// 測試使用 subString()函數
+//		testString();				// 測試在字串的尾巴加掛字串
+
+		// XXX proj08 父類別建構子呼叫的應用
 	//	Brad301 obj1 = new Brad301((short)2); // 他會去找一個 最接近 能自動轉型的建構子來用
 		// 以目前的情況來看 第2個建構子的 int輸入 最接近 short，所以電腦會選第2個建構子來用
-	//	Brad302 obj2 = new Brad302("3");
-		
-		testString();
+		Brad302 obj2 = new Brad302("3");
 
 	} // main
 	
@@ -49,8 +51,7 @@ public class javaPrac0827_2 {
 	
 	public static void testUseClass()
 	{
-		
-		// 
+		// TODO 有空這裡聽一下 看看當時是不是有甚麼 要筆記沒寫到的
 		
 		System.out.println(Bike.count);
 		
