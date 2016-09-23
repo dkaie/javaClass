@@ -1,17 +1,16 @@
 package tw.org.iii.classroom03;
 
-public class UseIDclass {
+// 這個 java檔  會用到  IDcard.java
 
+public class UseIDclass {
+	
 	public static void main(String[] args) {
 		// 
-
 		getVar();
-		
-		
-		
+			
 	} // main()
 
-	
+
 	public static void getVar()
 	{
 		IDcard id1 = new IDcard(true , 7);
@@ -34,8 +33,6 @@ public class UseIDclass {
 //		System.out.println(urId.getId());
 //		System.out.println(urId.getGender()?"男生":"女生");
 	} // void getVar
-	
-	
 	
 	
 } // class

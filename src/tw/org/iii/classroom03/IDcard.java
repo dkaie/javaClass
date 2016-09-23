@@ -1,5 +1,7 @@
 package tw.org.iii.classroom03;
 
+//UseIDclass.java 有用到 本檔
+
 public class IDcard {
 
 	//private String id = "A123456789"; // 把他封裝起來(定為private) 以免此(身分證字號)屬性被其他物件更改
@@ -72,7 +74,6 @@ public class IDcard {
 	{	// 產生物件實體後的初始化動作
 		this.id = id; // this指的是這個類別(目前所在的類別?)
 	} // 建構子 建構式
-	
 	
 	String getId()
 	{	// 傳回身分證字串
