@@ -41,18 +41,19 @@ public class jPrac0925_1 {
 
 			// 4. extect Statement   執行Statement
 //			stmt.executeLargeUpdate("INSERT INTO cust (cname,tel,birthday)" +
-//					 "VALUES ('Brad','123','1999-01-01')");			
+//					 "VALUES ('Brad','123','1999-01-01')");
+			// 雙引號被java用來當字串 所以 這裡SQL語法 用單引號 來 用字串 或用 跳脫字元 
 			//System.out.println("傳送 success");
 			
 			ResultSet rs = stmt.executeQuery("SELECT * FROM cust");
 			While(rs.next());
 			{
 				String id = rs.getString("id");
-				String cname = rs.getString("");
-				String tel = rs.getString("");
-				String birthday = rs.getString("");
+				String cname = rs.getString("cname");
+				String tel = rs.getString("tel");
+				String birthday = rs.getString("birthday");
 				
-				System.out.println(id+":");
+				System.out.println(id+":"+cname+":"+tel+":"+birthday+":");
 			}
 			
 			// 剛剛在設定資料庫時  id是為了要讓它自動遞增 所以設 int 其他都設字串型別
