@@ -41,3 +41,20 @@ class AAA extends Thread
 		super.run();
 	}
 }
+
+class OCJP271
+{
+	//int m1(){return 1;}
+	
+	Object m1(){return "";}
+	
+}
+class OCJP272 extends OCJP271
+{
+	//long m1(){return 1;}
+	// 方法名稱 參數一樣  override 基本型別的傳回值要相同  包括 void
+	
+	// String is a Object  物件型別 存在於 is a 關係
+	String m1(){return "";}
+}
+
