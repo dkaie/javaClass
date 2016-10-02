@@ -18,7 +18,8 @@ public class jPrac0911_7 {
 		Brad681 obj1 = new Brad681("第A個物件",200);
 		Brad681 obj2 = new Brad681("第B個物件",100);
 		Brad682 obj3 = new Brad682("第B個物件",150);
-		Thread t3 = new Thread(obj3);
+		Thread t3 = new Thread(obj3);// 把 Runnable obj3 拿去建構出  t3 Thread
+		// 可參考 上課筆記的 10509111540.png
 		
 		// 你可以去舞台旁邊等候   給CPU候選    不是程式設計師決定的  決定權在CPU手上
 		// 睡醒後 一樣去舞台旁等候    給CPU候選
@@ -29,8 +30,8 @@ public class jPrac0911_7 {
 		obj2.start();
 		// 加上 thread.sleep() 就可以很清楚的看到 obj1 obj2會同時執行 
 		
-		//obj3.start();
-		t3.start(); // TODO 1050922晚自習聽到這    15:40     1050911 15:36    錄影檔時間 2:16:21
+		//obj3.start(); // obj3物件不是執行緒,所以沒有start( )方法可呼叫
+		t3.start();
 		
 		try {
 			obj2.join();
@@ -94,13 +95,18 @@ class Brad681 extends Thread
 
 class Brad682 implements Runnable
 {	
+	// 課本常見的 第二種 執行緒的 處理模式
+	// Brad682這個類別做出來的 物件實體不是執行緒 , 因為繼承Object 實作Runnable方法
+	// 因為Runnable有定義, 所以有 run( )方法 ,但沒有start( )方法 
+	
 	// 使用 implement Runable介面 之後 可以寫成 執行緒的做法 又可在繼承其他類別
 	//他不是執行緒  他做出的物件實體沒有start()
 	// 擴充性高 : 這個可以 再 繼承 其他類別
 	
 	// Brad681為一個 thread
 	// 表現在 override run方法內
-	// TODO 1050922晚自習聽到這    Runnable介面  看看要不要 聽一下錄影檔  在 10509111403開始找看看      錄影檔時間 0:42:55
+	// TODO 1050922晚自習聽到這     1050911 15:37    錄影檔時間 2:17:21
+	// Runnable介面  看看要不要 聽一下錄影檔 
 	private String name;
 	private int delay;
 	Brad682(String name,int delay)
