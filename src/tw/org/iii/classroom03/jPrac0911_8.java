@@ -7,6 +7,8 @@ public class jPrac0911_8 {
 
 	// 一個 timer 可以做多個任務
 	
+	// 1050911 15:43    錄影檔時間 2:23:52
+	
 	public static void main(String[] args) {
 		Timer timer = new Timer();
 		timer.schedule(new MyTask1(), 3000); // 3秒後執行

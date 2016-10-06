@@ -105,7 +105,7 @@ class Brad682 implements Runnable
 	
 	// Brad681為一個 thread
 	// 表現在 override run方法內
-	// TODO 1050922晚自習聽到這     1050911 15:37    錄影檔時間 2:17:21
+	// TODO (已解決) 1050911 15:37    錄影檔時間 2:17:21
 	// Runnable介面  看看要不要 聽一下錄影檔 
 	private String name;
 	private int delay;
