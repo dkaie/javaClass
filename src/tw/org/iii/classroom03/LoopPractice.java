@@ -11,7 +11,7 @@ public class LoopPractice {
 //		prime_numbe_check01();	// 質數判斷 v1.0
 //		prime_numbe_check02();	// 1~100排成
 //		forLoopPractice05();	// 幼稚園等級的 for + if練習
-//		forLoopPractice06();	// 迴圈敘事句  很像 GOTO的東西
+		LoopLabel();			// 迴圈標籤  很像 GOTO的東西
 //		forLoopPractice07();	// continue
 //		NotUseArray();			// 用switch寫 骰子1~6
 //		ArrayPractice();		// 基礎陣列練習
@@ -135,9 +135,9 @@ public class LoopPractice {
 
 	} // void forLoopPractice05()	
 	
-	public static void forLoopPractice06()
+	public static void LoopLabel()
 	{
-		OutsideFor: // 把外圈加一個label
+		OutsideFor: // 把外圈加一個label 迴圈標籤
 		for(int j=3; j>0; j--)
 		{	for(int i=0; i<3; i++)
 			{
