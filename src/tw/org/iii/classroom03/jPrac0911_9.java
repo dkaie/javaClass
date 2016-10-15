@@ -17,12 +17,14 @@ import javax.swing.JPanel;
 // 這個 是 複製於 老師的 Brad70的範例程式
 
 
-// TODO 約 16:30 老師開始示範
+// TODO (正在重聽當中)1050911 16:32 老師開始示範
 
 public class jPrac0911_9 extends JFrame {
 	public jPrac0911_9() {
+		
+		// 設定一個視窗
 		setLayout(new BorderLayout());
-		add(new GameView(), BorderLayout.CENTER);
+		add(new GameView(), BorderLayout.CENTER); // GameView物件擺在BorderLayout的中間
 
 		setSize(640, 480);
 		setVisible(true);
@@ -30,7 +32,7 @@ public class jPrac0911_9 extends JFrame {
 	}
 
 	private class GameView extends JPanel {
-		private Timer timer;
+		private Timer timer; // 因為要表現有一個動畫的感覺, 所以這裡設一個Timer
 		private LinkedList<Ball> balls;
 
 		GameView() {
@@ -44,7 +46,7 @@ public class jPrac0911_9 extends JFrame {
 			}, 0, 40); // 這裡 類似像 人眼在看的 視覺頻率
 			// TODO 16:55
 			addMouseListener(new MyMouse());
-		}
+		} // 建構式
 
 		@Override
 		protected void paintComponent(Graphics g) {
@@ -69,6 +71,10 @@ public class jPrac0911_9 extends JFrame {
 		}
 
 		class Ball extends TimerTask {
+			// 因為想要讓球會動 所以他也是一個TimerTask
+			
+			// TODO 10510151721聽到這   1050911 16:36  錄影時間3:15:37
+			
 			int x, y, dx, dy;
 
 			Ball(int x, int y) {
@@ -93,10 +99,10 @@ public class jPrac0911_9 extends JFrame {
 				y += dy;
 			}
 		}
-	}
+	} // class GameView extends JPanel
 
 	public static void main(String[] args) {
 		new jPrac0911_9();
 	}
 
-}
+} // class jPrac0911_9 extends JFrame

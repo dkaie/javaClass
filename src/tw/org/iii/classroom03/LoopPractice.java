@@ -23,7 +23,7 @@ public class LoopPractice {
 	
 	public static void ForPractice01()
 	{
-		// TODO 有空可以聽一下 看老師怎麼講無窮迴圈的  10508201432
+		// TODO (已解決)有空可以聽一下 看老師怎麼講無窮迴圈的  1050820 12:10	
 		// 典型的無窮迴圈寫法 好像是for裡面沒寫都視為 true的樣子
 //		for(;;)
 //		{
@@ -40,10 +40,16 @@ public class LoopPractice {
 	public static void ForPractice02()
 	{
 		int i = 0;
+		// 以下是一個無窮迴圈
 		for(System.out.println("Hello"); ; System.out.println("--------"))
 		{
 			System.out.println(i++);
 		}
+		
+		// 老師說for小括號內的三個參數都跟計數器沒有關係
+		// 老師說如果 有聽過 for迴圈是計數器的觀念 , 則此觀念在java內不適用
+		// 手寫筆記中老師在這有對for迴圈的執行做5步驟說明
+		// 老師說 步驟1一定會執行到,有可能執行步驟1 2完後就跳出迴圈了
 	}
 	
 	public static void MultiplyTable()
